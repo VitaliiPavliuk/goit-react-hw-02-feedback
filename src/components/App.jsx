@@ -55,12 +55,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div style={{ margin: 20 }}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
             onLeaveFeedback={this.onLeaveFeedback}
           />
+
+          <h1>Statistics</h1>
 
           {this.countTotalFeedback() === 0 ? (
             <Notification message="There is no feedback"></Notification>
@@ -74,7 +76,7 @@ class App extends React.Component {
             />
           )}
         </Section>
-      </>
+      </div>
     );
   }
 }
